@@ -1,0 +1,46 @@
+<RelativeLayout
+    android:id="@+id/RelativeLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/white">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:map="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/map"
+              android:name="com.google.android.gms.maps.SupportMapFragment"
+              android:layout_below="@+id/location"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context="com.example.gabe.capstone_project.AddLocation">
+
+        <!--<RelativeLayout>-->
+
+    </fragment>
+
+    <Button
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+
+        android:layout_toEndOf="@+id/goBack"
+        android:onClick="getDraggedMarkerLocation"
+
+
+        android:text="Drop Water Marker"/>
+
+    <Button
+        android:id="@+id/goBack"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:text="Drop Parking Marker"
+        android:onClick="placeParkLocation"/>
+
+</RelativeLayout>

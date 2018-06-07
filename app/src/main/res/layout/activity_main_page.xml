@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gabe.capstone_project.MainPage">
+
+    <!--XML FOR ACTIVITY MAIN PAGE, CONNECTED TO MAINPAGE.JAVA-->
+
+    <!--Relative layout format, Used for rapid development, Be wary in
+    Adjusting objects, as one object will affect the layout of another object.-->
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <!--Title text in Blue-->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="35dp"
+            android:text="Paradise Resource Finder"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="35sp"/>
+
+        <!--Directions to users(small text, gray)-->
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:text="Select all that apply, then press start"
+            android:textAlignment="center"/>
+
+        <!--Toggle button for Shelters-->
+        <ToggleButton
+            android:id="@+id/toggleShelters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="46dp"
+            android:text="hi"
+            android:textOff=" Tap to add Shelters "
+            android:textOn=" Shelters Selected "/>
+
+        <!--Toggle Button for Parking-->
+        <ToggleButton
+            android:id="@+id/toggleParking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toggleShelters"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="ToggleParking"
+            android:textOff=" Tap to add Water "
+            android:textOn=" Water Selected "/>
+
+        <!--Image view for WiFi image (Goes with Toggle button WiFi)-->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignStart="@+id/imageView2"
+            android:layout_alignTop="@+id/toggleWifi"
+            app:srcCompat="@mipmap/transport"/>
+
+        <!--Toggle button for WiFi-->
+        <ToggleButton
+            android:id="@+id/toggleWifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toggleParking"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="ToggleWiFi"
+            android:textOff=" Tap to add Parking "
+            android:textOn=" Parking Selected "/>
+
+        <!--Image View for Parking(Goes with Toggle button Parking)-->
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/toggleParking"
+            android:layout_marginStart="15dp"
+            app:srcCompat="@mipmap/water"/>
+
+        <!--Image View for Homeless Shelters(Goes with Toggle button for Shelters)-->
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignStart="@+id/imageView2"
+            android:layout_alignTop="@+id/toggleShelters"
+            app:srcCompat="@mipmap/shelter"/>
+
+        <!--Start button, takes user to Mapping activity.
+        Calls method onStartButtonClick to pass intent data of
+        which toggle buttons are selected.-->
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:onClick="onStartButtonClick"
+            android:text="Start"/>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

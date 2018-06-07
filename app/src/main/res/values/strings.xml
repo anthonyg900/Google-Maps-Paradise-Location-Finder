@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Capstone_Project</string>
+    <string name="title_activity_mapping_closest">Map</string>
+    <string name="title_activity_add_location">Map</string>
+</resources>
